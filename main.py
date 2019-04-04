@@ -9,8 +9,12 @@ https://github.com/gunthercox/chatterbot-corpus
 """
 import generateResponse as gr
 import preprocess as pp
+import os
+
 content=""
-with open("corpus.txt") as infile:
+workdir = os.path.dirname(os.path.abspath(__file__))
+
+with open(workdir + "/corpus.txt") as infile:
     for line in infile:
         content=content+" "+line.lower()
 qrDict=pp.generateConversationTurnDict(content)
