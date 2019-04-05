@@ -79,4 +79,5 @@ while True:
         response = "Bye! Take care."
         print(botName + ": " + response + "\n")
         connect.send(response.encode())
+        botSocket.close()
         break
