@@ -1,6 +1,8 @@
 import socket
 import sys
 import time
+import threading as th
+import tkinter as tk
 
 #Ask user to input chatbot IP and user name
 botIP = str(input("Enter chatbot IP address: "))
@@ -18,17 +20,61 @@ clientTCP = 1024
 clientSocket.send(userName.encode())
 botName = clientSocket.recv(clientTCP).decode()
 
-#Chat loop
-while True:
-    msg = clientSocket.recv(clientTCP).decode()
-    print(botName + ": " + msg + "\n")
-    
-    response = str(input(userName + ": "))
-    if response.lower() == "bye":
-        clientSocket.send(response.encode())
-        print(userName + ": " + response + "\n")
+#Procedure to handle receive with thread
+def recvMsg():
+    while True:
         msg = clientSocket.recv(clientTCP).decode()
-        print(botName + ": " + msg + "\n")
-        break
-    else:
+        if msg != "Bye! Take care.":
+            displayMsg = botName + ": " + msg
+            msgDisplay.insert(tk.END, displayMsg)
+            print(botName + ": " + msg + "\n")
+            msgDisplay.see(msgDisplay.size())
+        else:
+            displayMsg = botName + ": " + msg
+            msgDisplay.insert(tk.END, displayMsg)
+            print(botName + ": " + msg + "\n")
+            msgDisplay.see(msgDisplay.size())
+            msgDisplay.insert(tk.END, "Closing window...")
+            msgDisplay.see(msgDisplay.size())
+            print("System exit...\n")
+            
+            time.sleep(2)
+            window.quit()
+            sys.exit(0)
+
+#Procedure to handle sending message and bind to GUI element
+def sendMsg(event = None):
+        response = msgSend.get()
+        msgSend.set("")
+
         clientSocket.send(response.encode())
+        displayMsg = userName + ": " + response
+        msgDisplay.insert(tk.END, displayMsg)
+        print(userName + ": " + response + "\n")
+        msgDisplay.see(msgDisplay.size())
+
+#GUI
+window = tk.Tk()
+window.title("ROBO Friend Chatbot")
+frame = tk.Frame(window)
+
+#Chatbot message display area and scrollbar
+scroll = tk.Scrollbar(frame)
+msgDisplay = tk.Listbox(frame, height = 30, width = 60)
+scroll.pack(side = tk.RIGHT, fill = tk.Y)
+msgDisplay.pack(side = tk.LEFT, fill = tk.BOTH)
+frame.pack()
+
+#Message typing textbox and send button
+msgSend = tk.StringVar()
+textbox = tk.Entry(window, width = 45, textvariable = msgSend)
+textbox.bind("<Return>", sendMsg)
+textbox.pack(side = tk.LEFT)
+button = tk.Button(window, text = "Send", command = sendMsg)
+button.pack(side = tk.RIGHT)
+
+#Start thread to receive message
+recvThread = th.Thread(target = recvMsg).start()
+
+print("Starting GUI...\n")
+window.mainloop()
