@@ -74,24 +74,9 @@ while True:
         response = gr.generateResponse(input, sentenceTokens, qrDict, ql)
         print(botName + ": " + str(response) + "\n")
         connect.send(response.encode())
+        sentenceTokens.remove(input)
     else:
         response = "Bye! Take care."
         print(botName + ": " + response + "\n")
         connect.send(response.encode())
-        break        
-
-"""flag=True
-print("ROBO: Hello, I am a chatbot. Type Bye to exit")
-while(flag==True):
-    userInput = input()
-    userInput=pp.sanitize_questions(userInput.lower())
-    if(userInput!='bye'):
-        if(userInput=='thanks' or userInput=='thank you' ):
-            flag=False
-            print("ROBO: You are welcome..")
-        else:
-            print("ROBO: "+gr.generateResponse(userInput,sentenceTokens,qrDict,ql))
-            sentenceTokens.remove(userInput)
-    else:
-        flag=False
-        print("ROBO: Bye! take care..")"""
+        break
