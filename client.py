@@ -20,7 +20,7 @@ clientTCP = 1024
 clientSocket.send(userName.encode())
 botName = clientSocket.recv(clientTCP).decode()
 
-#Procedure to handle receive with thread
+#Procedure to handle receive message with threading
 def recvMsg():
     while True:
         msg = clientSocket.recv(clientTCP).decode()
@@ -38,7 +38,7 @@ def recvMsg():
             msgDisplay.see(msgDisplay.size())
             print("System exit...\n")
             
-            time.sleep(2)
+            time.sleep(1)
             window.quit()
             sys.exit(0)
 
@@ -60,10 +60,11 @@ frame = tk.Frame(window)
 
 #Chatbot message display area and scrollbar
 scroll = tk.Scrollbar(frame)
-msgDisplay = tk.Listbox(frame, height = 30, width = 60)
+msgDisplay = tk.Listbox(frame, height = 30, width = 60, yscrollcommand = scroll.set)
 scroll.pack(side = tk.RIGHT, fill = tk.Y)
 msgDisplay.pack(side = tk.LEFT, fill = tk.BOTH)
 frame.pack()
+scroll.config(command = msgDisplay.yview)
 
 #Message typing textbox and send button
 msgSend = tk.StringVar()
