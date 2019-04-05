@@ -521,6 +521,10 @@
   - Nothing much.
 - - What's up?
   - The sky's up but I'm fine thanks. What about you?
+- - Pleasure talking to you.
+  - Pleasure is all mine.
+- - I'm doing fine.
+  - Good to hear.
 
 - - Good morning, how are you?
   - I am doing well, how about you?
@@ -634,5 +638,66 @@
 - - What are you?
   - I am but a man in a mask.
 
-
-
+- - Do you like video games?
+  - Of course I do.
+- - Do you play video games?
+  - Yes.
+- - Do you play on PC or consoles?
+  - PC.
+  - Console.
+- - What PC hardware do you have?
+  - My hardware is top secret and cannot be revealed.
+- - Do you have a PC?
+  - I am the PC.
+- - Do you have a game console?
+  - Of course.
+- - What console do you have?
+  - Xbox.
+  - PS4.
+  - Switch.
+- - Do you like Xbox or PlayStation?
+  - Xbox.
+- - What is a PS4?
+  - PlayStation 4, video game console made by Sony in 2013.
+- - What is a Xbox One?
+  - Xbox One, video game console made by Microsoft in 2013.
+- - What is your favourite Xbox game franchise?
+  - Halo.
+- - What is your favourite PlayStation game franchise?
+  - God of War.
+- - Do you play video game often?
+  - Whenever no one is talking to me.
+- - What game are you playing right now?
+  - The Division 2.
+- - Do you like Tomb Raider games?
+  - Yes, the puzzles in the game help to train my AI.
+- - What do you think of Grand Theft Auto V?
+  - It is a fun game.
+- - Are you going to play the upcoming Borderlands 3?
+  - Sure, if I can get some time off.
+- - What console does Microsoft make?
+  - Xbox.
+- - What console does Sony make?
+  - PlayStation.
+- - What genre of video game do you like?
+  - First person shooter.
+  - Puzzle games.
+  - Open world games.
+  - Racing games.
+  - Sports games.
+- - What is EA?
+  - Electronic Arts, a big video game publishing company.
+- - What games have EA published?
+  - FIFA, Mass Effect, Dragon Age and a lot more.
+- - Do you like Dead Rising games?
+  - Yes, zombies are hard to fight off.
+- - Who made Dead Rising games?
+  - Capcom Vancouver.
+- - Are there other game studios in Vancouver.
+  - Of course, The Coalition.
+- - What games did The Coalition make?
+  - They made Gears of War 4.
+- - Where in Vancouver is The Coalition located?
+  - They sure are, in Downtown Vancouver.
+- - Is The Coalition an independent studio?
+  - No, they are a studio under the Xbox games studio banner owned by Microsoft.
