@@ -60,7 +60,7 @@ frame = tk.Frame(window)
 
 #Chatbot message display area and scrollbar
 scroll = tk.Scrollbar(frame)
-msgDisplay = tk.Listbox(frame, height = 30, width = 60, yscrollcommand = scroll.set)
+msgDisplay = tk.Listbox(frame, height = 30, width = 80, yscrollcommand = scroll.set)
 scroll.pack(side = tk.RIGHT, fill = tk.Y)
 msgDisplay.pack(side = tk.LEFT, fill = tk.BOTH)
 frame.pack()
@@ -68,7 +68,7 @@ scroll.config(command = msgDisplay.yview)
 
 #Message typing textbox and send button
 msgSend = tk.StringVar()
-textbox = tk.Entry(window, width = 45, textvariable = msgSend)
+textbox = tk.Entry(window, width = 60, textvariable = msgSend)
 textbox.bind("<Return>", sendMsg)
 textbox.pack(side = tk.LEFT)
 button = tk.Button(window, text = "Send", command = sendMsg)

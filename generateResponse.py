@@ -8,6 +8,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from nltk.stem import WordNetLemmatizer
+import random
 
 #for a given sentence,return a lemmatized sentence
 def lemTokens(tokens):
@@ -27,7 +28,9 @@ def generateResponse(userInput,sentences,askResponseDict,ql,similarityThredhold=
     idx=np.argmax(valsWithoutLast,axis=0)
     #return response
     if(vals[0][idx]<similarityThredhold):
-        robotResponse="Your input keywords donot exist in my knowledge"
+        response = ["Your input keywords do not exist in my knowledge.", "Sorry, I do not understand.", "Sorry, KnowledgeOutOfBondsException, please type again.", "Sorry, I cannot comprehend.", "What is this? ROBO has no knolwedge of this, please type something else."]
+        resIndex = random.randint(0, 4)
+        robotResponse = response[resIndex]
         return robotResponse
     else:
         question=ql[idx]
