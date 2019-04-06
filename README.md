@@ -35,43 +35,43 @@ How to run the program:
   5.	To end the program type “bye” and send, the client window will automatically close
 
 Features added:
-  •	GUI
-    o	Users now can chat with the chatbot with a simple and convenient GUI window
-  •	 New chatbot topic
-    o	Interest – video game
-    o	Users can now talk to chatbot about their video game interests
-    o	Sample
-      	User: Do you like video games?
-      	ROBO: Of course I do.
-      	User: Do you play video game often?
-      	ROBO: Whenever no one is talking to me.
-  •	Response to query outside of knowledge base
-    o	Chatbot response added to user query that is outside knowledge base
-    o	Randomised response and some will prompt user for another query
-    o	Users will know when their input is not being understood by the chatbot and type something else
-    o	Sample
-      	User: air plane
-      	ROBO: Your input keywords do not exist in my knowledge.
-  •	Handle spelling mistakes
-    o	Chatbot can now handle small spelling mistakes
-    o	Users can now avoid the annoyance of getting an unintended response and must type again
-    o	Sample
-      	User: What can you eat?
-      	ROBO: I consume ram, and binary digits.
-      	User: what can you eee
-      	ROBO: I consume ram, and binary digits.
-  •	Language toolkits
-    o	Completed in Assignment 2
-    o	From sklearn.feature_extraction.text import TfidVectorizer
-      	Convert a collection of raw documents to a matrix of TF-IDF features
-      	Used on user input for similarity calculation
-    o	From sklearn.metrics.pairwise import cosin_similarity
-      	Compute cosin similarity between samples
-      	Used in process of match user input to keys in the dictionary
-    o	From nltk.stem import WordNetLemmatizer
-      	Finds matching word in WordNet
-      	Process user input
-    o	Toolkits used to help process user inputs to better understand the user
-•	Conversation via sockets
-    o	Any user or other chatbots on the same local network can talk to this chatbot when configured to use sockets and port 1234 and 1024
-    o	Chatbot now acts like a server and clients or other chatbots can connect to it and communicate with it
+  1. GUI
+     1. Users now can chat with the chatbot with a simple and convenient GUI window
+  2. New chatbot topic
+     1. Interest – video game
+     2. Users can now talk to chatbot about their video game interests
+     3. Sample
+         1. User: Do you like video games?
+         2. ROBO: Of course I do.
+         3. User: Do you play video game often?
+         4. ROBO: Whenever no one is talking to me.
+  3. Response to query outside of knowledge base
+     1. Chatbot response added to user query that is outside knowledge base
+     2. Randomised response and some will prompt user for another query
+     3. Users will know when their input is not being understood by the chatbot and type something else
+     4. Sample
+        1. User: air plane
+        2. ROBO: Your input keywords do not exist in my knowledge.
+  4. Handle spelling mistakes
+     1. Chatbot can now handle small spelling mistakes
+     2. Users can now avoid the annoyance of getting an unintended response and must type again
+     3. Sample
+        1. User: What can you eat?
+        2. ROBO: I consume ram, and binary digits.
+        3. User: what can you eee
+        4. ROBO: I consume ram, and binary digits.
+  5. Language toolkits
+     1. Completed in Assignment 2
+     2. From sklearn.feature_extraction.text import TfidVectorizer
+        1. Convert a collection of raw documents to a matrix of TF-IDF features
+        2. Used on user input for similarity calculation
+     3. From sklearn.metrics.pairwise import cosin_similarity
+        1. Compute cosin similarity between samples
+        2. Used in process of match user input to keys in the dictionary
+     4. From nltk.stem import WordNetLemmatizer
+        1. Finds matching word in WordNet
+        2. Process user input
+     5. Toolkits used to help process user inputs to better understand the user
+ 6. Conversation via sockets
+     1. Any user or other chatbots on the same local network can talk to this chatbot when configured to use sockets and port 1234 and 1024
+     2. Chatbot now acts like a server and clients or other chatbots can connect to it and communicate with it
