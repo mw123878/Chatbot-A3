@@ -1,8 +1,8 @@
 # 310 ChatBot
 
-Assignment 2
+## Assignment 2
 
-Introduction:
+### Introduction:
 This is a simple chatbot program. The most fundamental theory that this program relies on is text similarity.
 
 The following steps describe the logic of this program:
@@ -16,16 +16,16 @@ The following steps describe the logic of this program:
 
 The training corpus used in our project comes from this [Repo](https://github.com/gunthercox/chatterbot-corpus)
 
-Assignment 3
+## Assignment 3
 
-Introduction:
+### Introduction:
 This improved friend chatbot is based on the code from Assignment 2 and changes have been made to number of areas and some stayed the same. Chatbot processing of user input remains the same. The chatbot has been modified to represent the client-sever model and communicating using socket.
  
-Major Changes to code:
+### Major Changes to code:
   •	main.py now acts as a sever to accept connections on port 1234 and receive messages from client on port 1024
   •	added client.py with GUI for client/another chatbot to connect to friend chatbot and communicate
 
-How to run the program:
+### How to run the program:
   1.	Program requires Python 3.7 32-bit, NLTK, scikit-learn
       pip install -U scikit-learn
       pip install nltk
@@ -34,7 +34,7 @@ How to run the program:
   4.	A client window will open and now users can talk to the friend chatbot
   5.	To end the program type “bye” and send, the client window will automatically close
 
-Features added:
+### Features added:
   1. GUI
      1. Users now can chat with the chatbot with a simple and convenient GUI window
   2. New chatbot topic
