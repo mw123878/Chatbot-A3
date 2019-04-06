@@ -6,13 +6,13 @@
 This is a simple chatbot program. The most fundamental theory that this program relies on is text similarity.
 
 The following steps describe the logic of this program:
-  •	Clean text, including remove punctuation, duplicate whitespace.
-  • Divide text into multiple independent conversation turns.
-  •	Based on such conversation turns, create a dictionary whose key is the question and value the response.
-  •	Combine only questions, then tokenizing and lemmatization them.
-  •	Vectorize those sentence tokens and compare the user input with them.
-  •	Find the most similar question and use it as key to retrieve answer from training corpus.
-  •	Output answer/response.
+  1. Clean text, including remove punctuation, duplicate whitespace.
+  2. Divide text into multiple independent conversation turns.
+  3. Based on such conversation turns, create a dictionary whose key is the question and value the response.
+  4. Combine only questions, then tokenizing and lemmatization them.
+  5. Vectorize those sentence tokens and compare the user input with them.
+  6. Find the most similar question and use it as key to retrieve answer from training corpus.
+  7. Output answer/response.
 
 The training corpus used in our project comes from this [Repo](https://github.com/gunthercox/chatterbot-corpus)
 
@@ -22,8 +22,8 @@ The training corpus used in our project comes from this [Repo](https://github.co
 This improved friend chatbot is based on the code from Assignment 2 and changes have been made to number of areas and some stayed the same. Chatbot processing of user input remains the same. The chatbot has been modified to represent the client-sever model and communicating using socket.
  
 ### Major Changes to code:
-  •	main.py now acts as a sever to accept connections on port 1234 and receive messages from client on port 1024
-  •	added client.py with GUI for client/another chatbot to connect to friend chatbot and communicate
+  1. main.py now acts as a sever to accept connections on port 1234 and receive messages from client on port 1024
+  2. added client.py with GUI for client/another chatbot to connect to friend chatbot and communicate
 
 ### How to run the program:
   1.	Program requires Python 3.7 32-bit, NLTK, scikit-learn
